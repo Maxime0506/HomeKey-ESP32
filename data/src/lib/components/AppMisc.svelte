@@ -28,6 +28,7 @@
 			lockAlwaysUnlock: false,
 			lockAlwaysLock: false,
 			hkAuthPrecomputeEnabled: false,
+			nfcHighSpeedPollingEnabled: true,
 			proxBatEnabled: false,
 			btrLowStatusThreshold: 10,
 			webAuthEnabled: false,
@@ -463,6 +464,20 @@
 											type="checkbox"
 											bind:checked={
 												miscConfig.hkAuthPrecomputeEnabled
+											}
+											class="toggle toggle-primary"
+										/>
+									</label>
+								</div>
+								<div class="form-control">
+									<label class="label cursor-pointer">
+										<span class="label-text"
+											>High-Speed NFC Polling (More power)</span
+										>
+										<input
+											type="checkbox"
+											bind:checked={
+												miscConfig.nfcHighSpeedPollingEnabled
 											}
 											class="toggle toggle-primary"
 										/>

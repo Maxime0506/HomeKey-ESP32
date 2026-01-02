@@ -73,7 +73,8 @@ void setup() {
   }
   nfcManager = new NfcManager(*readerDataManager,
                               miscConfig.nfcPinsPreset == 255 ? miscConfig.nfcGpioPins : nfcGpioPinsPresets[miscConfig.nfcPinsPreset].gpioPins,
-                              miscConfig.hkAuthPrecomputeEnabled);
+                              miscConfig.hkAuthPrecomputeEnabled,
+                              miscConfig.nfcHighSpeedPollingEnabled);
   readerDataManager->begin();
   nfcManager->begin();
   homekitLock->begin();

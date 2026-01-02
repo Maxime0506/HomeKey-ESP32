@@ -95,6 +95,8 @@ export interface MiscConfig {
   lockAlwaysLock: boolean;
   /** Enable HomeKey auth precompute cache (faster taps, higher CPU/RAM) */
   hkAuthPrecomputeEnabled: boolean;
+  /** High-speed NFC polling (more power, faster detection) */
+  nfcHighSpeedPollingEnabled: boolean;
   /** GPIO pin for lock control */
   controlPin: number;
   /** GPIO pin for HomeSpan status indicator */

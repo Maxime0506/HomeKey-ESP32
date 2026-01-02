@@ -18,7 +18,7 @@ namespace espConfig { struct misc_config_t; }
 
 class NfcManager {
 public:
-    NfcManager(ReaderDataManager& readerDataManager, const std::array<uint8_t, 4> &nfcGpioPins, bool hkAuthPrecomputeEnabled);
+    NfcManager(ReaderDataManager& readerDataManager, const std::array<uint8_t, 4> &nfcGpioPins, bool hkAuthPrecomputeEnabled, bool nfcHighSpeedPollingEnabled);
     bool begin();
     void updateEcpData();
 
@@ -62,6 +62,7 @@ private:
 
     ReaderDataManager& m_readerDataManager;
     const bool m_hkAuthPrecomputeEnabled;
+    const bool m_nfcHighSpeedPollingEnabled;
 
     TaskHandle_t m_pollingTaskHandle;
     TaskHandle_t m_retryTaskHandle;
